@@ -17,13 +17,13 @@ import lombok.AllArgsConstructor;
 
 @Service
 @AllArgsConstructor
-public class ArticleServiceClient {
+public class ArticleRestClientService {
 
 	private static final String HACKER_RANK_URL = "https://jsonmock.hackerrank.com/api/articles?page={pageNumber}";
 
 	@Autowired
 	private final RestTemplate restTemplate;
-	private final MaptoArticles mapper;
+	private final ArticleConverterService mapper;
 
 	public List<Article> fetchArticleFromMockEndpoint(int pageNumber) {
 		URI uri = prepareUriForArticles(pageNumber);

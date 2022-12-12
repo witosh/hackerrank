@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.witosh.hackerrank.domain.Article;
 
 @Service
-public class MaptoArticles {
+public class ArticleConverterService {
 
 	public List<Article> tryToConvertToListOfArticles(String response) {
 		List<Article> articles = new ArrayList<>();
